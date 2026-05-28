@@ -3,4 +3,14 @@
   <div class="d-flex justify-content-end mt-3">
     <a [routerLink]="'/admin/categories/add'" class="btn btn-primary">Add category</a>
   </div>
+
+  <div>
+    @if(isLoading()) {
+      <p>Loading ...</p>
+    }@else {
+      @if (isError()){
+        <p>error ...</p>
+      }
+    }
+  </div>
 </div>
